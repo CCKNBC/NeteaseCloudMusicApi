@@ -16,12 +16,12 @@ jobs:
       matrix:
         node-version: [12.x, 14.x, 16.x, 18.x ]
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@24cb9080177205b6e8c946b17badbe402adc938f # v3
     - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v3
+      uses: actions/setup-node@64ed1c7eab4cce3362f8c340dee64e5eaeef8f7c # v3
       with:
         node-version: ${{ matrix.node-version }}
-    - uses: actions/cache@v3
+    - uses: actions/cache@88522ab9f39a2ea568f7027eddc7d8d8bc9d59c8 # v3
       with:
         path: ~/.npm
         key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
@@ -42,12 +42,12 @@ jobs:
       matrix:
         node-version: [14.x]
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@24cb9080177205b6e8c946b17badbe402adc938f # v3
     - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v3
+      uses: actions/setup-node@64ed1c7eab4cce3362f8c340dee64e5eaeef8f7c # v3
       with:
         node-version: ${{ matrix.node-version }}
-    - uses: actions/cache@v3
+    - uses: actions/cache@88522ab9f39a2ea568f7027eddc7d8d8bc9d59c8 # v3
       with:
         path: ~/.npm
         key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
